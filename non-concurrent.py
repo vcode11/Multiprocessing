@@ -1,6 +1,6 @@
 import requests
 import time
-sites = ['https://www.jython.org', "http://olympus.realpython.org/dice"]*40
+sites = ['https://www.jython.org', "http://olympus.realpython.org/dice"]*80
 def download_all_sites(sites):
     with requests.Session() as s:
         for url in sites:
@@ -9,5 +9,5 @@ def download_all_sites(sites):
 start_time = time.time()
 download_all_sites(sites)
 duration = time.time()-start_time
-print(f'Your program took {duration}s')
+print(f'Downloaded {len(sites)} in  {duration}s')
 
