@@ -11,8 +11,8 @@ async def main():
 
 if __name__ == "__main__":
     import time
-    start = time.perf_counter()
+    start = time.time()
     loop = asyncio.get_event_loop()
     loop.run_until_complete(asyncio.wait([count(), count(), count()]))
-    elapsed = time.perf_counter() - start
+    elapsed = time.time() - start
     print(f"{__file__} exectued in {elapsed:0.2f} seconds.")
