@@ -1,4 +1,6 @@
-import asyncio, time , aiohttp
+import asyncio
+import time
+import aiohttp
 async def download_site(url, session):
     async with session.get(url) as response:
         print(f'Read {response.content_length} from {url}')
