@@ -6,7 +6,8 @@ async def count():
     print("Two")
 
 async def main():
-    await asyncio.gather(count(), count(), count())
+    await asyncio.gather(count(), count(), count()) 
+    #can be run using asyncio.run(main()) in python3.7
 
 if __name__ == "__main__":
     import time
